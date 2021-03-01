@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/348642dc96.js"></script>
+    <title>myTodoApp</title>
+    <link rel="stylesheet" href="myTodo.css">
+</head>
+<body>
+    
+    <header>
+        <h1>My Todo List&#9786;</h1>
+    </header>
+    <button><a href="index.html" style="color: aqua;padding: 1rem;outline: none;border-radius: 1rem;border: none;">Home</a>
+    </button>
+
+    
+
+
+
+    <form action="" >
+        <input  type=" text" class="todo-input">
+        <button class="todo-btn" type="submit">
+        <i class="fas fa-plus-square">+</i>
+        </button>
+        <div class="select">
+            <select name="todos" class="todo-filter">
+                <option value="all">All </option>
+                <option value="completed">Completed </option>
+                <option value="pending">Pending </option>
+            </select>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list"> </ul>
+    </div>
+
+
+    <script src="myTodo.js"></script>
+</body>
+</html>

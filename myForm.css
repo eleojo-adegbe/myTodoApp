@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    /* background: blue; */
+    /* background-image:url("Gif2.gif"); */
+    background: linear-gradient(120deg, #f09308, #f03980);
+
+}
+.container{
+    
+    width: 30rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7rem;
+    position: absolute;
+    margin-right: 4rem;
+    background-image: url("world.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.container h1{
+    margin-right: 20rem;
+    color: white;
+}
+.form{
+    width: 30rem;
+    position: relative;
+    height: 50px;
+    background: rgb(17, 195, 240);
+    overflow: hidden;
+    /* left: 10rem; */ 
+    margin-top: 2rem;
+    padding-left: 1rem;
+    border-radius: 8rem;
+    
+}
+.form input{
+    width: 45%;
+    height: 100%;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    
+}
+.form label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+    /* background: rgba(24, 140, 18, 0.5); */
+    border-radius: 10px;
+    font-weight: bolder;
+    color: black;
+    border: 0;
+    box-shadow: 5px 5px 3px  black;
+    
+
+}
+.label-name .content-name{
+    padding-left:1rem ;
+    font-family: cursive;
+}
+.form label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #f09308;
+    transform: translateX(-100%);
+    transition: transform all 0.3s ease;
+}
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color:  #f09308;
+
+}
+.form input:focus + .label-name::after,.form input:valid + .label-name::after{
+    transform: translateY(0%);
+}
